@@ -17,16 +17,18 @@ This project involves controlling motors, implementing PID control, using encode
 4. Configure other components as specified in the code.
 
 ## Functions
-- `Indicator()`: Controls mode/heartbeat on the Smart LED.
-- `updateEncoders()`: Reads and updates encoder counts.
-- `driveDistanceWithPID(int distance)`: Drives a specified distance using PID control.
-- `turnLeft()`, `turnRight()`: Turns the robot left or right.
-- `calculatePID(int pos)`: Calculates PID output for motor control.
-- `setMotorSpeeds(int leftSpeed, int rightSpeed)`: Sets motor speeds and direction.
-- `stopMotors()`: Stops both motors.
-- `buttonISR(void* arg)`, `timerISR()`: Interrupt service routines for button and timer events.
-- `checkObjectColor()`: Checks color sensor data and adjusts motor behavior accordingly.
-- `timerDelay(int elapsedTime)`: Delays program execution based on elapsed time.
+## Functions
+- [`Indicator()`](https://github.com/LigJoebalz/robot-code/blob/main/Indicator.ino): Controls mode/heartbeat on the Smart LED.
+- [`updateEncoders()`](https://github.com/LigJoebalz/robot-code/blob/main/UpdateEncoders.ino): Reads and updates encoder counts.
+- [`driveDistanceWithPID(int distance)`](https://github.com/LigJoebalz/robot-code/blob/main/DriveDistanceWithPID.ino): Drives a specified distance using PID control.
+- [`turnLeft()`](https://github.com/LigJoebalz/robot-code/blob/main/TurnLeft.ino), [`turnRight()`](https://github.com/LigJoebalz/robot-code/blob/main/TurnRight.ino): Turns the robot left or right.
+- [`calculatePID(int pos)`](https://github.com/LigJoebalz/robot-code/blob/main/CalculatePID.ino): Calculates PID output for motor control.
+- [`setMotorSpeeds(int leftSpeed, int rightSpeed)`](https://github.com/LigJoebalz/robot-code/blob/main/SetMotorSpeeds.ino): Sets motor speeds and direction.
+- [`stopMotors()`](https://github.com/LigJoebalz/robot-code/blob/main/StopMotors.ino): Stops both motors.
+- [`buttonISR(void* arg)`](https://github.com/LigJoebalz/robot-code/blob/main/ButtonISR.ino), [`timerISR()`](https://github.com/LigJoebalz/robot-code/blob/main/TimerISR.ino): Interrupt service routines for button and timer events.
+- [`checkObjectColor()`](https://github.com/LigJoebalz/robot-code/blob/main/CheckObjectColor.ino): Checks color sensor data and adjusts motor behavior accordingly.
+- [`timerDelay(int elapsedTime)`](https://github.com/LigJoebalz/robot-code/blob/main/TimerDelay.ino): Delays program execution based on elapsed time.
+
 
 ## Usage
 1. Upload the code to your Arduino board.
