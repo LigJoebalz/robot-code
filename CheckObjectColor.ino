@@ -1,3 +1,4 @@
+// checks the color of any object located within the feed chamber of the robot and, based upon its color determination, it chooses to either reject it, or store it in its launch chamber.
 void checkObjectColor(){
   digitalWrite(cTCSLED, !digitalRead(cLEDSwitch));    // turn on onboard LED if switch state is low (on position)
   if (tcsFlag) {                                      // if colour sensor initialized
