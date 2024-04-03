@@ -8,7 +8,7 @@ This project involves controlling motors, implementing PID control, using encode
 - Adafruit NeoPixel library
 - MSE2202_Lib library
 - Adafruit TCS34725 color sensor library
-- Servo library
+- ServoESP32.Fix library (This Library is required to be installed in order for motors to function correctly with PID and PWM control)
 
 ## Setup
 1. Connect the motors to the designated pins (`leftMotorIN1`, `leftMotorIN2`, `rightMotorIN1`, `rightMotorIN2`).
