@@ -1,3 +1,4 @@
+// Definitions for preset values, void fucntion declarations, object creations and pin locations.
 #include <Arduino.h>
 #include <Adafruit_NeoPixel.h>
 #include <MSE2202_Lib.h>
