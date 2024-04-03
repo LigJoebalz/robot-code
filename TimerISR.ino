@@ -1,4 +1,4 @@
-// timer interrupt service routine
+// Interruptable service routine for timer
 void ARDUINO_ISR_ATTR timerISR() {
   if (runState) {                                      // Only send pulse if motor should be running
     digitalWrite(cStepPin, !digitalRead(cStepPin));    // toggle state of step pin
