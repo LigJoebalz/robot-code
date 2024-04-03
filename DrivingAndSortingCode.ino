@@ -76,6 +76,7 @@ const int cLeftAdjust = 0;                                                     /
 const int cRightAdjust = 3;  
 
 // Define variables for PID control
+int leftRightSwitch;
 int ePrev;
 float eInt;
 unsigned long prevTime;
@@ -175,7 +176,6 @@ void setup() {
 void loop() {
   runState=true;
   //switch to control between driving and searching for ir beacon
-  robotModeIndex = 3;
   switch(robotModeIndex){
     //drives in a sweeping motion across area until a specified number of passes have been made
     case 0:
@@ -205,16 +205,16 @@ void loop() {
       }
 
     case 1:
-      //home to the ir beacon
       if(Scan.Available()){
         if (Scan.Get_IR_Data() == 'U'){
-        }
+          driveDistanceWithPID(25);
+        }else while(Scan.Get_IR_Data() != 'U'){
+          setMotorSpeeds(1600, 1400);
+          timerDelay(0.01);
+          stopMotors();
       }
-
-    case 3:
-      checkObjectColor();
-
   }
+}
 }
 
 // Function to read and update encoder counts
@@ -255,7 +255,6 @@ void driveDistanceWithPID(int distance) {
   // Move until both motors reach the desired distance
   while (abs(leftEncoderCount - initialLeftCount) < distance || abs(rightEncoderCount - initialRightCount) < distance) {
     // Calculate PID output for both motors
-    checkObjectColor();
     double outputLeft = calculatePID(leftEncoderCount - initialLeftCount);
     double outputRight = calculatePID(rightEncoderCount - initialRightCount);
 
@@ -292,6 +291,7 @@ float calculatePID(int pos) {
 void setMotorSpeeds(int leftSpeed, int rightSpeed) {
   leftMotor.writeMicroseconds(leftSpeed);
   rightMotor.writeMicroseconds(rightSpeed);
+  checkObjectColor();
 
   // Set motor direction based on speed
   if (leftSpeed > 1500) {
