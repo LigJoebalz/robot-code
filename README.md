@@ -15,6 +15,7 @@ This project involves controlling motors, implementing PID control, using encode
 2. Attach encoders to the encoder pins (`leftMotorEncoderPin1`, `leftMotorEncoderPin2`, `rightMotorEncoderPin1`, `rightMotorEncoderPin2`).
 3. Connect servo motors to PWM pins (`leftMotorPWM`, `rightMotorPWM`).
 4. Configure other components as specified in the code.
+5. All Pins setup in the current code can be found in [`Definitions.ino`](https://github.com/LigJoebalz/robot-code/blob/main/Definitions.ino)
 
 ## Functions
 ## Functions
