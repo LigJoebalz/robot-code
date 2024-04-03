@@ -18,7 +18,6 @@ This project involves controlling motors, implementing PID control, using encode
 
 ## Functions
 ## Functions
-- [`Indicator()`](https://github.com/LigJoebalz/robot-code/blob/main/Indicator.ino): Controls mode/heartbeat on the Smart LED.
 - [`updateEncoders()`](https://github.com/LigJoebalz/robot-code/blob/main/UpdateEncoders.ino): Reads and updates encoder counts.
 - [`driveDistanceWithPID(int distance)`](https://github.com/LigJoebalz/robot-code/blob/main/DriveDistanceWithPID.ino): Drives a specified distance using PID control.
 - [`turnLeft()`](https://github.com/LigJoebalz/robot-code/blob/main/TurnLeft.ino), [`turnRight()`](https://github.com/LigJoebalz/robot-code/blob/main/TurnRight.ino): Turns the robot left or right.
