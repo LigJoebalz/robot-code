@@ -2,7 +2,6 @@
 
 This project involves controlling motors, implementing PID control, using encoder feedback, integrating servo motors, and sensor interaction on an Arduino board. The Complete Code is available in the [`DrivingAndSortingCode.ino`](https://github.com/LigJoebalz/robot-code/blob/main/DrivingAndSortingCode.ino) file.
 
-
 ## Components Used
 - Arduino board
 - Adafruit NeoPixel library
@@ -18,7 +17,6 @@ This project involves controlling motors, implementing PID control, using encode
 5. All Pins setup in the current code can be found in [`Definitions.ino`](https://github.com/LigJoebalz/robot-code/blob/main/Definitions.ino)
 
 ## Functions
-## Functions
 - [`updateEncoders()`](https://github.com/LigJoebalz/robot-code/blob/main/UpdateEncoders.ino): Reads and updates encoder counts.
 - [`driveDistanceWithPID(int distance)`](https://github.com/LigJoebalz/robot-code/blob/main/DriveDistanceWithPID.ino): Drives a specified distance using PID control.
 - [`turnLeft()`](https://github.com/LigJoebalz/robot-code/blob/main/TurnLeft.ino), [`turnRight()`](https://github.com/LigJoebalz/robot-code/blob/main/TurnRight.ino): Turns the robot left or right.
@@ -28,7 +26,6 @@ This project involves controlling motors, implementing PID control, using encode
 - [`buttonISR(void* arg)`](https://github.com/LigJoebalz/robot-code/blob/main/ButtonISR.ino), [`timerISR()`](https://github.com/LigJoebalz/robot-code/blob/main/TimerISR.ino): Interrupt service routines for button and timer events.
 - [`checkObjectColor()`](https://github.com/LigJoebalz/robot-code/blob/main/CheckObjectColor.ino): Checks color sensor data and adjusts motor behavior accordingly.
 - [`timerDelay(int elapsedTime)`](https://github.com/LigJoebalz/robot-code/blob/main/TimerDelay.ino): Delays program execution based on elapsed time.
-
 
 ## Usage
 1. Upload the code to your Arduino board.
